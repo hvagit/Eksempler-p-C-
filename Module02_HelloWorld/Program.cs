@@ -26,7 +26,7 @@
 
             for (int x = 0; x < 3; x++)
             {
-                System.Console.WriteLine("Hej "+x);
+                System.Console.WriteLine("Hej Hej "+x);
                 u += x;
             }
 
