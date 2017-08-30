@@ -20,7 +20,6 @@ namespace Strenge
             Console.WriteLine(samletnavn.Substring(7));
             Console.WriteLine(samletnavn.Substring(7, 4));
 
-
             StringBuilder sb = new StringBuilder();
             sb.Append(fornavn);
             sb.Append(" ");
@@ -52,6 +51,39 @@ namespace Strenge
 
             string dataTilFil = "Tekst i fil";
             System.IO.File.WriteAllText(@"X:\nyFil.txt", dataTilFil);
+
+
+            char pad = ' ';
+            string linie = "";
+            for (int i = 0; i < 10; i++)
+            {
+                linie = "";
+                for (int j = 0; j < 10; j++)
+                {
+                    int tal = (i + 1) * (j + 1);
+                    string number = tal + "";
+                    if (tal == 90)
+                    {
+                        number = number.PadRight(3, pad);
+                    }
+                    else
+                    {
+                        number = number.PadLeft(2, pad);
+                        number = number.PadRight(4, pad);
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
+                    if (tal > 50)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                    }
+
+                    linie += number;
+
+                    Console.Write(number);
+                }
+                Console.WriteLine();
+                // Console.WriteLine(linie);
+            }
 
             if (System.Diagnostics.Debugger.IsAttached)
             {
