@@ -4,6 +4,13 @@
     {
         static void Main(string[] args)
         {
+            //            System.Int32 i;
+            //            System.Decimal komma;
+            int i;
+            long l;
+            decimal komma;
+            double d;
+
 
             if (System.Diagnostics.Debugger.IsAttached)
             {
