@@ -50,6 +50,9 @@ namespace Strenge
             string u = "abc\rdef";
             Console.WriteLine("Escape r " + u);
 
+            string dataTilFil = "Tekst i fil";
+            System.IO.File.WriteAllText(@"X:\nyFil.txt", dataTilFil);
+
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 Console.WriteLine("PRESS ANY KEY TO CONTINUE");
