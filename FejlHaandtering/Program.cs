@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,16 @@ namespace FejlHaandtering
 {
     class Program
     {
+        // Logningen lægges relativt ift. dette projekt...i bin/Debug/logs
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+            
         static void Main(string[] args)
         {
             try
             {
+                logger.Debug("Hip Hip");
                 Run();
+                logger.Debug("Hurra");
             }
             catch (Exception ex)
             {
