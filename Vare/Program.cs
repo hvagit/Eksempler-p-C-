@@ -36,7 +36,7 @@ namespace Vare
             {
                 Console.WriteLine("Setter navn");
                 navn = value;
-            }
+                                                                              }
         }
 
         private double pris;
